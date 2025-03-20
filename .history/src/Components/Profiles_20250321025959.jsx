@@ -87,7 +87,7 @@ export default function Profiles() {
                     <button
                         onClick={() => setCurrentPage(currentPage - 1)}
                         disabled={currentPage === 1}
-                        className="mx-2 px-4 py-2 text-white cursor-pointer bg-blue-800 rounded disabled:opacity-50"
+                        className="mx-2 px-4 py-2 bg-blue-800 rounded disabled:opacity-50"
                     >
                         Prev
                     </button>
@@ -95,7 +95,7 @@ export default function Profiles() {
                     <button
                         onClick={() => setCurrentPage(currentPage + 1)}
                         disabled={currentPage === totalPages}
-                        className="mx-2 px-4 py-2 text-white cursor-pointer bg-blue-800 rounded disabled:opacity-50"
+                        className="mx-2 px-4 py-2 bg-bl-200 rounded disabled:opacity-50"
                     >
                         Next
                     </button>

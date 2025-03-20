@@ -19,11 +19,11 @@ export default function Profiles() {
                 setLoading(true);
                 setError(null);
 
-                const response = await axios.get('https://backend.graycorp.io:9000/mymate/api/v1/tempClients')
+                const response = await axios.get('https://backend.graycorp.io:9000/mymate/api/v1/tempClient')
                 setProfiles(response.data);
             }
             catch (err) {
-                setError(<div className='text-3xl text-center font-bold text-red-500 animate-pulse my-27'>{`Error in Fetching API ${err}`}</div>);
+                setError(<div className='bg-'>Error in Fetching API ${err}</div>);
             }
             finally {
                 setLoading(false);
@@ -40,7 +40,7 @@ export default function Profiles() {
         firstProfileIndex + profilesPerPage);
 
 
-    if (loading) return <div className='text-3xl text-center text-blue-500 mt-45 animate-pulse'>Loading.........</div>
+    if (loading) return <div className='text-3xl text-center text-blue-300 mt-45'>Loading.........</div>
     if (error) return <div>{error}</div>
     return (
         <div className="container mx-auto p-4">
@@ -87,7 +87,7 @@ export default function Profiles() {
                     <button
                         onClick={() => setCurrentPage(currentPage - 1)}
                         disabled={currentPage === 1}
-                        className="mx-2 px-4 py-2 text-white cursor-pointer bg-blue-800 rounded disabled:opacity-50"
+                        className="mx-2 px-4 py-2 bg-gray-200 rounded disabled:opacity-50"
                     >
                         Prev
                     </button>
@@ -95,7 +95,7 @@ export default function Profiles() {
                     <button
                         onClick={() => setCurrentPage(currentPage + 1)}
                         disabled={currentPage === totalPages}
-                        className="mx-2 px-4 py-2 text-white cursor-pointer bg-blue-800 rounded disabled:opacity-50"
+                        className="mx-2 px-4 py-2 bg-gray-200 rounded disabled:opacity-50"
                     >
                         Next
                     </button>
