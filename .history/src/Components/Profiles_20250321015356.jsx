@@ -9,7 +9,7 @@ export default function Profiles() {
     const [error, setError] = useState(null);
     const [search, setSearch] = useState("");
     const [currentPage, setCurrentPage] = useState(1);
-    const profilesPerPage = 5;
+    const profilesPerPage = 55;
 
 
 
@@ -53,7 +53,7 @@ export default function Profiles() {
                             <img
                                 src={profile.client_profile_url}
                                 alt={profile.client_name}
-                                className="md:w-full h-85 object-cover rounded"
+                                className="w-full h-40 object-cover rounded"
                             />
                             <h2 className="flex justify-between items-center px-5 text-lg font-medium mt-4">
                                 <span className='text-gray-600'>Name</span>
@@ -73,7 +73,7 @@ export default function Profiles() {
                     ))
                 ) : (
 
-                    <div className="text-center col-span-full text-gray-500 font-bold  text-center my-11">
+                    <div className="text-center col-span-full text-gray-500">
                         No profiles found.
                     </div>
                 )}

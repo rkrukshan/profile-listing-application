@@ -35,7 +35,7 @@ export default function Profiles() {
     if (loading) return <div>Loading.........</div>
     if (error) return <div>{error}</div>
     return (
-        <div className="container mx-auto p-4">
+        <div className="container flex justify-center mx-auto p-4">
             <input
                 type="text"
                 placeholder="Search by name..."
