@@ -43,7 +43,7 @@ export default function Profiles() {
     if (loading) return <div className='text-3xl text-center text-blue-500 mt-10 animate-pulse'><span className="animate-spin">...</span>Loading</div>
     if (error) return <div className='text-2xl text-center text-red-500'>{error}</div>
     return (
-        <div className="container mx-auto p-4 my-29">
+        <div className="container mx-auto p-4 my-26">
             <input
                 type="search"
                 placeholder="Search by name..."

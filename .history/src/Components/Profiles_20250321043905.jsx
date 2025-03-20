@@ -40,21 +40,21 @@ export default function Profiles() {
         firstProfileIndex + profilesPerPage);
 
 
-    if (loading) return <div className='text-3xl text-center text-blue-500 mt-10 animate-pulse'><span className="animate-spin">...</span>Loading</div>
-    if (error) return <div className='text-2xl text-center text-red-500'>{error}</div>
+    if (loading) return <div className='text-3xl text-center text-blue-500 mt-45 animate-pulse'>Loading.........</div>
+    if (error) return <div>{error}</div>
     return (
-        <div className="container mx-auto p-4 my-29">
+        <div className="container mx-auto p-4">
             <input
                 type="search"
                 placeholder="Search by name..."
-                className="w-full ring-1 ring-gray-300 p-2 border rounded my-6 text-center font-bold focus:ring-2 focus:ring-blue-500 outline-none"
+                className="w-full ring-1 ring-slate-200 p-2 border rounded my-27 text-center font-bold"
                 value={search}
                 onChange={(e) => {
                     setSearch(e.target.value);
                     setCurrentPage(1);
                 }} />
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 my-45">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {currentProfiles.length > 0 ? (
                     currentProfiles.map((profile) => (
                         <div key={profile.client_id} className="ring-2 ring-blue-950 p-4 rounded shadow">
@@ -83,7 +83,7 @@ export default function Profiles() {
             </div>
 
             {totalPages > 1 && (
-                <div className="flex justify-center items-center mt-6 space-x-4">
+                <div className="flex justify-center mt-4">
                     <button
                         onClick={() => setCurrentPage(currentPage - 1)}
                         disabled={currentPage === 1}
