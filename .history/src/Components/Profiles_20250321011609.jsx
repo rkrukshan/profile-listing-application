@@ -7,7 +7,7 @@ export default function Profiles() {
     const [profiles, setProfiles] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const [search, setSearch] = useState("");
+    const [search, setSearch] = useState(1);
     const [currentPage, setCurrentPage] = useState(1);
     const profilesPerPage = 5;
 
@@ -26,6 +26,7 @@ export default function Profiles() {
 
     const filteredProfiles = profiles.filter((profile) => profile.client_name.toLowerCase().includes(search.toLowerCase()))
 
+    const totalPages = Math.ceil(filteredProfiles.length / profilesPerPage);
     const firstProfileIndex = (currentPage - 1) * profilesPerPage;
     const currentProfiles = filteredProfiles.slice(
         firstProfileIndex,
@@ -49,21 +50,8 @@ export default function Profiles() {
             <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {currentProfiles.length > 0 ? (
                     currentProfiles.map((profile) => (
-                        <div key={profile.client_id} className="border p-4 rounded shadow">
-                            <img
-                                src={profile.client_profile_url}
-                                alt={profile.client_name}
-                                className="w-full h-40 object-cover rounded"
-                            />
-                            <h2 className="text-lg font-bold mt-2">{profile.client_name}</h2>
-                            <p className="text-gray-600">{profile.client_city}</p>
-                            <Link
-                                to={`/profile/${profile.client_id}`}
-                                className="block mt-2 text-blue-500"
-                            >
-                                View Details
-                            </Link>
-                        </div>
+
+                        
                     ))
                 ) : (
 
@@ -72,9 +60,6 @@ export default function Profiles() {
                     </div>
                 )}
             </div>
-
-            
-
         </div>
 
     )

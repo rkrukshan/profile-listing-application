@@ -7,7 +7,7 @@ export default function Profiles() {
     const [profiles, setProfiles] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const [search, setSearch] = useState("");
+    const [search, setSearch] = useState(1);
     const [currentPage, setCurrentPage] = useState(1);
     const profilesPerPage = 5;
 

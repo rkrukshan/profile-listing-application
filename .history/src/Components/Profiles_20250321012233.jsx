@@ -7,7 +7,7 @@ export default function Profiles() {
     const [profiles, setProfiles] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const [search, setSearch] = useState("");
+    const [search, setSearch] = useState(1);
     const [currentPage, setCurrentPage] = useState(1);
     const profilesPerPage = 5;
 
@@ -26,6 +26,7 @@ export default function Profiles() {
 
     const filteredProfiles = profiles.filter((profile) => profile.client_name.toLowerCase().includes(search.toLowerCase()))
 
+    const totalPages = Math.ceil(filteredProfiles.length / profilesPerPage);
     const firstProfileIndex = (currentPage - 1) * profilesPerPage;
     const currentProfiles = filteredProfiles.slice(
         firstProfileIndex,
@@ -73,7 +74,26 @@ export default function Profiles() {
                 )}
             </div>
 
-            
+            {totalPages > 1 && (
+                <div className="flex justify-center mt-4">
+                    <button
+                        onClick={() => setCurrentPage(currentPage - 1)}
+                        disabled={currentPage === 1}
+                        className="mx-2 px-4 py-2 bg-gray-200 rounded disabled:opacity-50"
+                    >
+                        Prev
+                    </button>
+                    <span className="px-4 py-2">{`Page ${currentPage} of ${totalPages}`}</span>
+                    <button
+                        onClick={() => setCurrentPage(currentPage + 1)}
+                        disabled={currentPage === totalPages}
+                        className="mx-2 px-4 py-2 bg-gray-200 rounded disabled:opacity-50"
+                    >
+                        Next
+                    </button>
+
+                </div>
+            )}
 
         </div>
 
