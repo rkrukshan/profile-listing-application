@@ -54,7 +54,7 @@ export default function Profiles() {
                     setCurrentPage(1);
                 }} />
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 my-15">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 my-45">
                 {currentProfiles.length > 0 ? (
                     currentProfiles.map((profile) => (
                         <div key={profile.client_id} className="ring-2 ring-blue-950 p-4 rounded shadow">
