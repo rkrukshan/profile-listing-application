@@ -53,7 +53,7 @@ export default function Profiles() {
                             <img
                                 src={profile.client_profile_url}
                                 alt={profile.client_name}
-                                className="md:w-full h-96 object-cover rounded"
+                                className="md:w-full h-8596 object-cover rounded"
                             />
                             <h2 className="flex justify-between items-center px-5 text-lg font-medium mt-4">
                                 <span className='text-gray-600'>Name</span>

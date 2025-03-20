@@ -25,7 +25,7 @@ export default function Profiles() {
     }, []);
 
     const filteredProfiles = profiles.filter((profile) => profile.client_name.toLowerCase().includes(search.toLowerCase()))
-    const totalPages = Math.ceil(filteredProfiles.length / profilesPerPage);
+    const totalPages=Math.ceil(filteredProfiles.length/profilesPerPage);
     const firstProfileIndex = (currentPage - 1) * profilesPerPage;
     const currentProfiles = filteredProfiles.slice(
         firstProfileIndex,
@@ -53,11 +53,16 @@ export default function Profiles() {
                             <img
                                 src={profile.client_profile_url}
                                 alt={profile.client_name}
-                                className="md:w-full h-96 object-cover rounded"
+                                className="md:w-full h-85 object-cover rounded"
                             />
                             <h2 className="flex justify-between items-center px-5 text-lg font-medium mt-4">
                                 <span className='text-gray-600'>Name</span>
                                 <span className="text-blue-600 font-semibold">{profile.client_name}</span>
+                            </h2>
+
+                            <h2 className="flex justify-between items-center px-5 text-lg font-medium mt-4">
+                                <span className='text-gray-600'>Location</span>
+                                <span className="text-blue-600 font-semibold">{profile.client_city}</span>
                             </h2>
 
                             <Link
