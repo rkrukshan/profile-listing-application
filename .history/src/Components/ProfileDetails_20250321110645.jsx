@@ -45,7 +45,7 @@ export default function ProfileDetails() {
                 stiffness: 50,
                 damping: 10
             }}
-            className="container mx-auto p-4 my-11">
+            className="container mx-auto p-4 my-1">
 
             <div className="max-w-full sm:max-w-lg mx-auto border p-4 rounded shadow">
                 <img src={profile.client_profile_url} alt="" className="w-full h-96 sm:h-80 md:h-96 object-contain rounded" />
