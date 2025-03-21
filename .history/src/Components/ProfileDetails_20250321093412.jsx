@@ -42,8 +42,8 @@ export default function ProfileDetails() {
             animate={{ rotate: 360, scale: 1 }}
             transition={{
                 type: "spring",
-                stiffness: 50,
-                damping: 10
+                stiffness: 260,
+                damping: 20
             }}
             className="container mx-auto p-4 my-19"
         >
@@ -59,7 +59,7 @@ export default function ProfileDetails() {
                     <span className='text-2xl font-light mt-2'>{profile.client_mobile}</span>
                 </h2>
 
-                <Link to="/" className='block mt-5 text-white font-bold  text-center bg-blue-800 mx-27 rounded-xl'>View All</Link>
+                <Link to="/" className='text-center font-bold block mt-4 text-blue-900'>View All</Link>
             </div>
         </motion.div>
     )

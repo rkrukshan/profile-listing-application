@@ -42,8 +42,8 @@ export default function ProfileDetails() {
             animate={{ rotate: 360, scale: 1 }}
             transition={{
                 type: "spring",
-                stiffness: 50,
-                damping: 10
+                stiffness: 20,
+                damping: 20
             }}
             className="container mx-auto p-4 my-19"
         >
