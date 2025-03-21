@@ -48,7 +48,7 @@ export default function ProfileDetails() {
             className="container mx-auto p-4 my-19"
         >
             <div className="max-w-full sm:max-w-lg mx-auto border p-4 rounded shadow">
-                <img src={profile.client_profile_url} alt="" className="w-full h-96 sm:h-80 md:h-96 object-contain rounded" />
+                <img src={profile.client_profile_url} alt="" className="w-full h-full object-contain rounded" />
                 <h2 className="flex justify-between text-2xl font-bold mt-2">Name
                     <span className='text-2xl font-light mt-2'>{profile.client_name}</span>
                 </h2>
