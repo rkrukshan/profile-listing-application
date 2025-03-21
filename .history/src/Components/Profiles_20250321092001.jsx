@@ -77,7 +77,7 @@ export default function Profiles() {
 
                             <Link
                                 to={`/profile/${profile.client_id}`}
-                                className="block mt-5 text-white font-bold  text-center bg-blue-800 mx-27 rounded-xl ">View Details
+                                className="block mt-5 text-blue-800 font-bold  text-center">View Details
                             </Link>
                         </motion.div>))
                 ) : (
@@ -93,7 +93,7 @@ export default function Profiles() {
                     <button
                         onClick={() => setCurrentPage(currentPage - 1)}
                         disabled={currentPage === 1}
-                        className="mx-2 px-4 py-2 text-white font-semibold bg-blue-700 cursor-pointer rounded disabled:opacity-50"
+                        className="mx-2 px-4 py-2 text-white font-bold bg-blue-700 cursor-pointer rounded disabled:opacity-50"
                     >
                         Prev
                     </button>
@@ -101,7 +101,7 @@ export default function Profiles() {
                     <button
                         onClick={() => setCurrentPage(currentPage + 1)}
                         disabled={currentPage === totalPages}
-                        className="mx-2 px-4 py-2 text-white font-semibold bg-blue-700 cursor-pointer rounded disabled:opacity-50"
+                        className="mx-2 px-4 py-2 text-white font-bold bg-blue-700 cursor-pointer rounded disabled:opacity-50"
                     >
                         Next
                     </button>

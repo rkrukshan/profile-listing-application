@@ -59,12 +59,12 @@ export default function Profiles() {
                 {currentProfiles.length > 0 ? (
                     currentProfiles.map((profile) => (
                         <motion.div
-                            key={profile.client_id}
-                            className="ring-2 ring-blue-950 p-4 rounded shadow duration-50 ease-in-out transform hover:scale-105"
-                            initial={{ opacity: 0, y: 20, scale: 0.9 }}
-                            animate={{ opacity: 1, y: 0, scale: 1 }}
-                            transition={{ duration: 0.5 }}
-                        >
+                        key={profile.client_id}
+                        className="ring-2 ring-blue-950 p-4 rounded shadow"
+                        initial={{ opacity: 0, y: 20, scale: 0.9 }}  
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        transition={{ duration: 0.5 }}
+                    >
                             <img
                                 src={profile.client_profile_url}
                                 alt={profile.client_name}
@@ -77,14 +77,19 @@ export default function Profiles() {
 
                             <Link
                                 to={`/profile/${profile.client_id}`}
-                                className="block mt-5 text-white font-bold  text-center bg-blue-800 mx-27 rounded-xl ">View Details
+                                className="block mt-5 text-blue-800 font-bold  text-center">View Details
                             </Link>
                         </motion.div>))
                 ) : (
 
-                    <div className="text-3xl text-center col-span-full text-gray-500 font-bold animate-pulse my-11">
+                    <motion.div
+                    className="text-3xl text-center col-span-full text-gray-500 font-bold animate-pulse my-11"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration:  }}
+                >
                         No profiles found.
-                    </div>
+                    </motion.div>
                 )}
             </div>
 
@@ -93,7 +98,7 @@ export default function Profiles() {
                     <button
                         onClick={() => setCurrentPage(currentPage - 1)}
                         disabled={currentPage === 1}
-                        className="mx-2 px-4 py-2 text-white font-semibold bg-blue-700 cursor-pointer rounded disabled:opacity-50"
+                        className="mx-2 px-4 py-2 text-white bg-blue-700 cursor-pointer rounded disabled:opacity-50"
                     >
                         Prev
                     </button>
@@ -101,7 +106,7 @@ export default function Profiles() {
                     <button
                         onClick={() => setCurrentPage(currentPage + 1)}
                         disabled={currentPage === totalPages}
-                        className="mx-2 px-4 py-2 text-white font-semibold bg-blue-700 cursor-pointer rounded disabled:opacity-50"
+                        className="mx-2 px-4 py-2 text-white bg-blue-700 cursor-pointer rounded disabled:opacity-50"
                     >
                         Next
                     </button>

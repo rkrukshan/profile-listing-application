@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import { motion } from 'framer-motion';
 
 export default function Profiles() {
     const [profiles, setProfiles] = useState([]);
@@ -60,15 +59,15 @@ export default function Profiles() {
                     currentProfiles.map((profile) => (
                         <motion.div
                             key={profile.client_id}
-                            className="ring-2 ring-blue-950 p-4 rounded shadow duration-50 ease-in-out transform hover:scale-105"
-                            initial={{ opacity: 0, y: 20, scale: 0.9 }}
-                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                            className="ring-2 ring-blue-950 p-4 rounded shadow"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5 }}
                         >
                             <img
                                 src={profile.client_profile_url}
                                 alt={profile.client_name}
-                                className="md:w-full h-96 roundedw-full sm:h-72 md:h-80 lg:h-96 object-cover rounded"
+                                className="md:w-full h-96 object-cover roundedw-full h-64 sm:h-72 md:h-80 lg:h-96 object-cover rounded"
                             />
                             <h2 className="flex justify-between items-center px-5 text-lg font-medium mt-4">
                                 <span className='text-gray-600'>Name</span>
@@ -77,12 +76,12 @@ export default function Profiles() {
 
                             <Link
                                 to={`/profile/${profile.client_id}`}
-                                className="block mt-5 text-white font-bold  text-center bg-blue-800 mx-27 rounded-xl ">View Details
+                                className="block mt-5 text-blue-800 font-bold  text-center">View Details
                             </Link>
                         </motion.div>))
                 ) : (
 
-                    <div className="text-3xl text-center col-span-full text-gray-500 font-bold animate-pulse my-11">
+                    <div className="text-center col-span-full text-gray-500 font-bold  text-center my-11">
                         No profiles found.
                     </div>
                 )}
@@ -93,7 +92,7 @@ export default function Profiles() {
                     <button
                         onClick={() => setCurrentPage(currentPage - 1)}
                         disabled={currentPage === 1}
-                        className="mx-2 px-4 py-2 text-white font-semibold bg-blue-700 cursor-pointer rounded disabled:opacity-50"
+                        className="mx-2 px-4 py-2 text-white bg-blue-700 cursor-pointer rounded disabled:opacity-50"
                     >
                         Prev
                     </button>
@@ -101,7 +100,7 @@ export default function Profiles() {
                     <button
                         onClick={() => setCurrentPage(currentPage + 1)}
                         disabled={currentPage === totalPages}
-                        className="mx-2 px-4 py-2 text-white font-semibold bg-blue-700 cursor-pointer rounded disabled:opacity-50"
+                        className="mx-2 px-4 py-2 text-white bg-blue-700 cursor-pointer rounded disabled:opacity-50"
                     >
                         Next
                     </button>

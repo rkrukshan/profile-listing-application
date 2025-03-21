@@ -77,7 +77,7 @@ export default function Profiles() {
 
                             <Link
                                 to={`/profile/${profile.client_id}`}
-                                className="block mt-5 text-white font-bold  text-center bg-blue-800 mx-27 rounded-xl ">View Details
+                                className="block mt-5 text-white font-bold  text-center bg-blue-800 mx-27 ">View Details
                             </Link>
                         </motion.div>))
                 ) : (

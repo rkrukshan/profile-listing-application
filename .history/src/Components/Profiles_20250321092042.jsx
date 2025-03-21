@@ -77,7 +77,7 @@ export default function Profiles() {
 
                             <Link
                                 to={`/profile/${profile.client_id}`}
-                                className="block mt-5 text-white font-bold  text-center bg-blue-800 mx-27 rounded-xl ">View Details
+                                className="block mt-5 text-blue-800 font-bold  text-center">View Details
                             </Link>
                         </motion.div>))
                 ) : (
@@ -97,7 +97,7 @@ export default function Profiles() {
                     >
                         Prev
                     </button>
-                    <span className="px-4 py-2">{`Page ${currentPage} of ${totalPages}`}</span>
+                    <span className="fpx-4 py-2">{`Page ${currentPage} of ${totalPages}`}</span>
                     <button
                         onClick={() => setCurrentPage(currentPage + 1)}
                         disabled={currentPage === totalPages}
