@@ -7,8 +7,8 @@ import React from 'react';
 
 export default function App() {
   return (
-    <div className='h-screen bg-gray-200'>
-    <Header/>
+    <>
+    
     <Router>
       <Routes>
         <Route path='/' element={<Profiles />} />
@@ -16,6 +16,6 @@ export default function App() {
       </Routes>
     </Router>
     
-    </div>
+    </>
   );
 }

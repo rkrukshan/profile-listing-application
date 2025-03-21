@@ -7,15 +7,11 @@ import React from 'react';
 
 export default function App() {
   return (
-    <div className='h-screen bg-gray-200'>
-    <Header/>
     <Router>
       <Routes>
         <Route path='/' element={<Profiles />} />
         <Route path='/profile/:id' element={<ProfileDetails />} />
       </Routes>
     </Router>
-    
-    </div>
   );
 }

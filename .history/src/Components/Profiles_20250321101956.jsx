@@ -44,11 +44,11 @@ export default function Profiles() {
     if (loading) return <div className='text-3xl text-center text-blue-500 mt-10 animate-pulse'>Loading.....</div>
     if (error) return <div className='text-2xl text-center text-red-500'>{error}</div>
     return (
-        <div className="container mx-auto p-4 my-5">
+        <div className="container mx-auto p-4 my-1">
             <input
                 type="search"
                 placeholder="Search by name..."
-                className="w-full ring-1 ring-gray-300 p-2 border rounded my-6 text-slate-950 text-center font-bold focus:ring-2 focus:ring-blue-500 outline-none"
+                className="w-full ring-1 ring-gray-300 p-2 border rounded my-6 text-center font-bold focus:ring-2 focus:ring-blue-500 outline-none"
                 value={search}
                 onChange={(e) => {
                     setSearch(e.target.value);

@@ -48,7 +48,7 @@ export default function Profiles() {
             <input
                 type="search"
                 placeholder="Search by name..."
-                className="w-full ring-1 ring-gray-300 p-2 border rounded my-6 text-slate-950 text-center font-bold focus:ring-2 focus:ring-blue-500 outline-none"
+                className="w-full ring-1 ring-gray-300 p-2 border rounded my-6 text-slate-900 text-center font-bold focus:ring-2 focus:ring-blue-500 outline-none"
                 value={search}
                 onChange={(e) => {
                     setSearch(e.target.value);
