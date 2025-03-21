@@ -93,7 +93,7 @@ export default function Profiles() {
                     <button
                         onClick={() => setCurrentPage(currentPage - 1)}
                         disabled={currentPage === 1}
-                        className="pagination-btn"
+                        className=""
                     >
                         Prev
                     </button>
@@ -101,7 +101,7 @@ export default function Profiles() {
                     <button
                         onClick={() => setCurrentPage(currentPage + 1)}
                         disabled={currentPage === totalPages}
-                        className="pagination-btn"
+                        className=""
                     >
                         Next
                     </button>
