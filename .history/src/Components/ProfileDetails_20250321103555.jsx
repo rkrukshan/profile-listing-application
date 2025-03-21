@@ -56,9 +56,6 @@ export default function ProfileDetails() {
                 <h2 className="flex justify-between text-2xl font-bold mt-2">Contact Number
                     <span className='text-2xl font-light mt-2'>{profile.client_mobile}</span>
                 </h2>
-                <h2 className="flex justify-between text-2xl font-bold mt-2">Location
-                    <span className='text-2xl font-light mt-2'>{profile.client_city}</span>
-                </h2>
 
                 <Link to="/" className='view-btn'>View All</Link>
             </div>
