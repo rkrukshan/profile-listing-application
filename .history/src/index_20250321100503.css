@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+
+
+    .view-btn{
+       @apply block mt-5 text-white font-bold text-center bg-blue-800 py-2 px-4 rounded-xl mx-8 sm:mx-12 md:mx-5; 
+    }

@@ -57,7 +57,7 @@ export default function Profiles() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 my-15">
                 {currentProfiles.length > 0 ? (
-                    currentProfiles.map((profile) => (
+                    currentProfiles.map((profile) => (responsiveness
                         <motion.div
                             key={profile.client_id}
                             className="ring-2 ring-blue-950 p-4 rounded shadow duration-50 ease-in-out transform hover:scale-105"
@@ -77,7 +77,7 @@ export default function Profiles() {
 
                             <Link
                                 to={`/profile/${profile.client_id}`}
-                                className="view-btn">View Details
+                                className="block mt-5 text-white font-bold text-center bg-blue-800 py-2 px-4 rounded-xl mx-8 sm:mx-12 md:mx-5">View Details
                             </Link>
                         </motion.div>))
                 ) : (

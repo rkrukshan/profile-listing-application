@@ -59,7 +59,7 @@ export default function ProfileDetails() {
                     <span className='text-2xl font-light mt-2'>{profile.client_mobile}</span>
                 </h2>
 
-                <Link to="/" className='view-btn'>View All</Link>
+                <Link to="/" className='view'>View All</Link>
             </div>
         </motion.div>
     )

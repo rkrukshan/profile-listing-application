@@ -77,7 +77,7 @@ export default function Profiles() {
 
                             <Link
                                 to={`/profile/${profile.client_id}`}
-                                className="view-btn">View Details
+                                className="">View Details
                             </Link>
                         </motion.div>))
                 ) : (
