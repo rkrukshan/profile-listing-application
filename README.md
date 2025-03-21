@@ -8,16 +8,16 @@ Project setup Instructions.
 
   npm run dev
 
-
 React Profile Listing Application
 This project built with React, Vite, Tailwind CSS, React Router, Axios and Framer Motion
 this Profile Listing Application fetch users data from an API and display those data  with a user interface. This application includes search by name of the profille, can see single profile details, pagination to navigate profiles,appropriate error handling and messages, and animation using framer motion with responsive design.  
 
-State Management
+ State Management
 in here usestate and useEffect hooks are used for API calls
 useState used for managing profiles, loading state, errors, search input, and pagination.
 useEffect used for Fetch data from API when the component mount.
 
+ Screen Shots of the UI.
 
 ![image](https://github.com/user-attachments/assets/442f84f9-1e62-48bf-85ae-b71e64f5c139)
 
