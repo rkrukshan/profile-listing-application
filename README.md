@@ -18,6 +18,7 @@ in here usestate and useEffect hooks are used for API calls
 useState used for managing profiles, loading state, errors, search input, and pagination.
 useEffect used for Fetch data from API when the component mount.
 
+![image](https://github.com/user-attachments/assets/c512d967-5695-452c-8679-047cf042d597)
 
 ![image](https://github.com/user-attachments/assets/442f84f9-1e62-48bf-85ae-b71e64f5c139)
 
@@ -31,4 +32,3 @@ useEffect used for Fetch data from API when the component mount.
 
 ![image](https://github.com/user-attachments/assets/a85dbb17-20da-4319-8661-c4b956aa179f)
 
-![image](https://github.com/user-attachments/assets/c512d967-5695-452c-8679-047cf042d597)
